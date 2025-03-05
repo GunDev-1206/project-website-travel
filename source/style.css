@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,200;1,400;1,500&dislay=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Popins', 'sans-serif';
+    cursor: pointer;
+}
+
+#wrapper {
+    width: auto;
+    height: auto;
+}
+
+#header {
+    background: #f3f7f8;
+    width: 100%;
+    padding: 0px 30px;
+    margin-top: 33;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menu {
+    list-style: none;
+    display: flex;
+}
+#menu .item {
+    margin: 0px 25px;
+}
+#menu .item a {
+    color: #626A67;
+    text-decoration: none;
+   
+}
+
+#actions {
+    display: flex;
+}
+#actions .item {
+    margin-left: 22px;
+}
+
+#banner {
+    width: 100%;
+    background-image: url(image/MekongLodge.jpg);
+    height: 550px;
+    margin-top: 1px;
+    display: flex;
+    padding: 0px 133px;
+    position: relative;
+}
+#banner .box-left , #banner .box-right {
+    width: 50%;
+}
+#banner .box-left h2 {
+    font-size: 48px;
+    margin-top: 75px;
+    color: #fff;
+}
+#banner .box-left p {
+    color: #f7f9fa;
+    font-weight: initial;
+}
+#banner .box-left button {
+    width: 191px;
+    height: 40px;
+    margin-top: 41px;
+    background: #1d1a1a;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: 0.4s;
+}
