@@ -3,10 +3,9 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Popins', 'sans-serif';
-    cursor: pointer;
+    font-family: 'Popins', 'sans-serif';  
 }
-
+/* màn hình */
 #wrapper {
     width: auto;
     height: auto;
@@ -21,7 +20,7 @@
     justify-content: space-between;
     align-items: center;
 }
-
+/* Thanh nav */
 #menu {
     list-style: none;
     display: flex;
@@ -32,7 +31,11 @@
 #menu .item a {
     color: #626A67;
     text-decoration: none;
-   
+}
+#menu .item a:hover {
+    background: transparent;
+	text-shadow: 1px 1px 10px rgba(89, 22, 20, 0.6);
+	color: #581514;
 }
 
 #actions {
@@ -41,32 +44,53 @@
 #actions .item {
     margin-left: 22px;
 }
-
+#actions .item img:hover{
+    cursor: pointer;
+    transition: 2s;
+    animation:animation  1.2s infinite linear;
+}
+/* Banner intro */
 #banner {
     width: 100%;
-    background-image: url(image/MekongLodge.jpg);
+    background-image: url(image/Resort-Pandanus/Pandanus-resort-gallery-toan-canh17.jpg);
     height: 550px;
     margin-top: 1px;
     display: flex;
     padding: 0px 133px;
     position: relative;
+
 }
 #banner .box-left , #banner .box-right {
     width: 50%;
 }
 #banner .box-left h2 {
-    font-size: 48px;
-    margin-top: 75px;
-    color: #fff;
+    /* font-size: 48px;
+    margin-top: 120px;
+    color: #fff; */
+        text-align: center;
+        font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+        font-size: 60px;
+        padding-top: 40px;
+        color: #e0dfdc;
+        letter-spacing: .1em;
+        text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212, 0 22px 30px rgba(0, 0, 0, 0.9);
+      
 }
-#banner .box-left p {
-    color: #f7f9fa;
+.bg-text .transbox {
+    background-color: rgba(24, 23, 23, 0.4);
+    border-radius: 15px;
+    padding: 20px;
+}
+.bg-text p {
+    color: #fff; 
     font-weight: initial;
 }
+
+
 #banner .box-left button {
     width: 191px;
     height: 40px;
-    margin-top: 41px;
+    margin-top: 40px;
     background: #1d1a1a;
     border: none;
     outline: none;
@@ -75,3 +99,185 @@
     border-radius: 20px;
     transition: 0.4s;
 }
+#banner .box-left button:hover {
+    background: orange;
+}
+/* vùng hiệu ứng hình ảnh */
+#banner .box-right {
+    padding-left: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#banner .box-right img {
+    width: 150px;
+    height: 320px;
+    margin: 0px 10px;
+    border-radius: 20px;
+    transition: 0.4s;
+    animation:animation  3s infinite linear;
+}
+#banner .box-right img:nth-child(1)
+{
+    animation-delay: 0.5s;
+}
+#banner .box-right img:nth-child(2)
+{
+    animation-delay: 1s;
+}
+@keyframes animation {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+/* slide show */
+ .slideshow-container .title-slide h2{
+    text-align: center;
+    margin-top: -10;
+    margin-bottom: 44px;
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    font-size: 42px;
+    color: #f795d3;
+    text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212, 0 22px 30px rgba(0, 0, 0, 0.9);
+ }
+
+ 
+ * {box-sizing:border-box}
+ /* thiết lập style cho slideshow container */
+  .slideshow-container {
+    max-width: auto;
+    position: relative;
+    margin: 50px 50px 0px 50px;
+    
+  }
+  .slideshow-container img{
+    width: auto;
+    height: 600px;
+  }
+ /* ẩn hình ảnh cho phần tử slideshow */
+  .mySlides {
+    display: none;
+  }
+ /* thiết kế nút mũi tên*/
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 48px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+ /* thiết kế nút mũi tên next nằm phía bên phải */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+ /* hiệu ứng thay đổi background khi hover vào nút mũi tên*/
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+ /* Thiết lập style cho nội dung của mỗi phần tử slideshow */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+ /* Thiết lập style cho số hiển thị của phần tử */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 0;
+  }
+ /* thiết lập style  nút tròn điều khiển*/
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+ .active, .dot:hover {
+    background-color: #717171;
+  }
+ /* tạo hiệu ứng chuyển động fade */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+ @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+ @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  /* grid */
+  #grid h2{
+    text-align: center;
+    margin-top: 25px;
+  }
+  #grid {
+    padding: 20px;
+  }
+  #grid .opt-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+    max-width: auto;
+    margin: auto;
+  }
+  #grid .card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  #grid .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  #grid .card img{
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+  }
+  #grid .nd-card {
+    padding: 15px;
+  }
+  #grid .nd-card h3{
+    font-size: 18px;
+    margin: 0;
+  }
+  #grid .nd-card p{
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+  }
